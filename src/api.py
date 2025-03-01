@@ -8,7 +8,7 @@ import os
 app = FastAPI()
 
 # Dynamically find and load the model
-model_path = os.path.join(os.path.dirname(__file__), "models/final_fraud_detection_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "../models/final_fraud_detection_model.pkl")
 model = joblib.load(model_path)
 
 # Define request body model
