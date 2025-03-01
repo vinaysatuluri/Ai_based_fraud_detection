@@ -44,8 +44,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 models = {
     "Logistic Regression": LogisticRegression(),
-    "Random Forest": RandomForestClassifier(n_estimators=50, random_state=42),
-    "XGBoost": XGBClassifier(eval_metric="logloss")
+    "Random Forest": RandomForestClassifier(n_estimators=50, max_depth=10, random_state=42),  # Reduce estimators
+    "XGBoost": XGBClassifier(n_estimators=50, max_depth=3, eval_metric="logloss")
 }
 
 results = []
